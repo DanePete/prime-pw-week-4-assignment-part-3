@@ -4,17 +4,7 @@ console.log('***** Cart Functions *****');
 
 let basket = [];
 const maxItems = 5;
-items = ['coffee','bacon','eggs','toast'];
-
-/**
- * Add Item
- * adds an item to the basket array
- */
-function addItem(item) {
-  console.log(isFull)
-  basket.push(item);
-  return true;
-}
+items = ['coffee','bacon','eggs','toast','orange juice', 'watermelon', '123', '12312'];
 
 /**
  * List Item
@@ -48,18 +38,32 @@ function isFull() {
   }
 }
 
+/**
+ * Add Item
+ * adds an item to the basket array
+ */
+ function addItem(item) {
+   console.log(isFull());
+  if(isFull() == false) {
+    basket.push(item);
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 // Adding an item to the basket
-console.log(`Basket is ${basket}`);
+// console.log(`Basket is ${basket}`);
 
  /**
   * Solution 1 - Adding individually
   */
-console.log('Adding toast (expect true)', addItem('toast'));
-console.log('Adding bacon (expect true)', addItem('bacon'));
-console.log('Adding eggs (expect true)', addItem('eggs'));
-console.log('Adding orange (expect true)', addItem('orange'));
-console.log('Adding coffee (expect true)', addItem('coffee'));
+console.log('Adding steak (expect true)', addItem('steak'));
+console.log('Adding potatoes (expect true)', addItem('potatoes'));
+console.log('Adding salad (expect true)', addItem('salad'));
+console.log('Adding ipa (expect true)', addItem('ipa'));
+console.log('Adding wine (expect true)', addItem('wine'));
 
 /**
  * Solution 2 - Adding via an array calling the function in a loop
