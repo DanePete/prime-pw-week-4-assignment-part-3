@@ -3,6 +3,7 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 let basket = [];
+const maxItems = 5;
 
 function addItem(item) {
   basket.push(item);
@@ -17,8 +18,8 @@ function listItems(array) {
 
 function empty(array) {
   basket = [];
+  return 'basket now empty';
 }
-
 
 /**
  * Add Item
@@ -32,10 +33,12 @@ console.log(`Basket is now ${basket}`);
  * List Item
  * Lists out the items in the basket array
  */
-// console.log(listItems(basket));
+console.log(listItems(basket));
 
 /**
  * Empty Basket
  * Sets the basket array back to empty
  */
-// console.log(empty(basket));
+console.log(empty(basket));
+console.log(basket);
+
