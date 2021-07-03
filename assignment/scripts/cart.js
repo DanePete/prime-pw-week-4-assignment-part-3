@@ -5,13 +5,17 @@ console.log('***** Cart Functions *****');
 let basket = [];
 
 function addItem(item) {
-
+  basket.push(item);
+  return true;
 }
 
 function listItems(array) {
-
+  
 }
 
 function empty(array) {
-  
+
 }
+
+
+console.log(addItem('toast'));
