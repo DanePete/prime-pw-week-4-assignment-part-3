@@ -71,9 +71,9 @@ function removeItem(item) {
 // Adding an item to the basket
 // console.log(`Basket is ${basket}`);
 
- /**
-  * Solution 1 - Adding individually
-  */
+/**
+ * Solution 1 - Adding individually
+ */
 console.log('Adding steak (expect true)', addItem('steak'));
 console.log('Adding potatoes (expect true)', addItem('potatoes'));
 console.log('Adding salad (expect true)', addItem('salad'));
@@ -83,7 +83,6 @@ console.log('Adding wine (expect true)', addItem('wine'));
 /**
  * Solution 2 - Adding via an array calling the function in a loop
  */
-
 for (let i of items) {
   console.log('Adding coffee (expect true)', addItem(i));
 }
