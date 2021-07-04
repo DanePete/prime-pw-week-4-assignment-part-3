@@ -3,6 +3,7 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 let basket = [];
+let foundItem;
 const maxItems = 5;
 items = ['coffee','bacon','eggs','toast','orange juice', 'watermelon', '123', '12312'];
 
@@ -28,7 +29,7 @@ function empty() {
 /**
  * Is Full
  * Returns false if basket contains less than max number of items
- * Returns true othwerise (equal or maore than maxItems)
+ * Returns true otherwise (equal or maore than maxItems)
  */
 function isFull() {
   if(basket.length < maxItems) {
@@ -52,6 +53,20 @@ function isFull() {
   }
 }
 
+/**
+  * Remove Item
+  * Take an input parameter for a string item
+  * Use Array.indexOf to find the index of the first matching item in the basket.
+  * Use Array.splice to remove the first matching item from the basket.
+  * Return the item removed or null if the item was not found
+ */
+function removeItem(item) {
+  console.log(basket.indexOf(item));
+  if(basket.indexOf(item) != -1) {
+    foundItem = basket.splice(0,1);
+  } 
+  return foundItem;
+}
 
 // Adding an item to the basket
 // console.log(`Basket is ${basket}`);
@@ -77,6 +92,9 @@ console.log(`Basket is now ${basket}`);
 
 // Listing the Items inside the basket
 listItems(basket);
+
+// Removing single item
+console.log(removeItem('steak'));
 
 // Emptying the basket
 empty();
